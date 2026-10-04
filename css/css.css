@@ -115,7 +115,7 @@ body {
   /* Lægger et mørkt farvelag oven på baggrundsbilledet */
   background-image:
     linear-gradient(to right, rgba(8, 16, 35, 0.85),rgba(8, 16, 35, 0.45)),
-    url("../images/Truss-baggrund.JPG");
+    url("../images/Mikrofon-baggrund.JPG");
 
   /* Lader billedet fylde hele sektionen uden at blive strakt */
   background-size: cover;
@@ -161,6 +161,122 @@ body {
 
 
 
+
+/* Vælger hele kontaktsektionen */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Laver to lige brede kolonner */
+  align-items: center;
+  gap: 60px;
+
+  padding: 80px 6%;
+  background-color: var(--navy);
+  color: white;
+}
+
+/* Vælger den lille tekst over overskriften */
+.contact-eyebrow {
+  margin: 0 0 24px; /* Giver afstand til overskriften nedenunder */
+  font-size: 12px;
+  font-weight: 700; /* Gør teksten fed */
+  letter-spacing: 2px;
+  text-transform: uppercase; /* Viser teksten med store bogstaver */
+  line-height: 1.6; /* Giver luft, hvis teksten fylder flere linjer */
+  color: #ccd3df;
+}
+
+/* Vælger kontaktsektionens overskrift */
+.contact h2 {
+  margin: 0; /* Fjerner overskriftens standardafstand */
+  font-size: clamp(36px, 4vw, 60px); /* Tilpasser størrelsen fra 36 til 60px */
+  line-height: 1.1; /* Holder overskriftens linjer tæt sammen */
+  letter-spacing: -1px;
+}
+
+/* Vælger det fremhævede ord i overskriften */
+.contact h2 span {
+  color: var(--blue); /* Gør ordet "programmet?" blåt */
+}
+
+/* Vælger højre kolonne */
+.contact-details {
+  min-width: 0; /* Tillader kolonnen at blive smallere end sit indhold */
+}
+
+/* Vælger teksten over mailadressen */
+.contact-details p {
+  margin: 0 0 32px; /* Giver luft mellem teksten og mailadressen */
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ccd3df;
+}
+
+/* Vælger linket med Bos mailadresse */
+.contact-email {
+  display: flex; /* Placerer mailadressen og pilen på en række */
+  justify-content: space-between; /* Skubber pilen mod højre */
+  align-items: center; /* Centrerer mailadressen og pilen lodret */
+  gap: 16px; /* Sikrer afstand mellem mailadressen og pilen */
+
+  padding-bottom: 20px; /* Giver luft over understregningen */
+  border-bottom: 1px solid var(--muted); /* Tegner en streg under linket */
+
+  color: white; 
+  font-size: clamp(22px, 2.5vw, 36px); /* Tilpasser tekstens størrelse */
+  text-decoration: none; /* Fjerner browserens almindelige understregning */
+}
+
+/* Vælger det første span, som indeholder selve mailadressen */
+.contact-email span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere; /* Tillader linjeskift, hvis adressen ikke kan være der */
+}
+
+/* Vælger den dekorative pil */
+.contact-email span[aria-hidden="true"] {
+  color: var(--blue); /* Gør pilen blå */
+  flex-shrink: 0; /* Forhindrer pilen i at blive klemt */
+}
+
+/* Ændrer mailadressens farve, når musen holdes over linket */
+.contact-email:hover {
+  color: var(--blue);
+}
+
+/* Vælger linket med class="hero-cta" */
+.hero-cta {
+  display: inline-flex; /* Placerer teksten og pilen på en række */
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 32px; /* Giver luft mellem introteksten og knappen */
+  padding: 18px 24px;
+  border-radius: 4px; /* Runder hjørnerne lidt */
+
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600; /* Gør teksten lidt fed */
+
+  transition: background-color 0.2s ease; /* Gør farveskiftet blødt */
+}
+
+/* Vælger knappen, når musen holdes over den */
+.hero-cta:hover {
+  background-color: var(--navy);
+}
+
+
+
+
+
+
+
+
+
+/* Her starter footeren */
 
 /* Vælger elementet med class="footer" */
 .footer {
@@ -235,6 +351,25 @@ body {
   outline: 3px solid var(--blue);
   outline-offset: 4px;
 }
+
+/* Vælger links i footerens kontaktområde */
+.footer-contact a {
+  display: block; /* Giver hvert link sin egen linje */
+  margin-top: 12px;
+  overflow-wrap: anywhere; /* Lader lange adresser ombryde ved behov */
+}
+
+/* Her slutter footeren */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -348,8 +483,18 @@ body {
     align-items: flex-start; /* Justerer dem mod venstre */
     gap: 12px;
   }
+
+  /* Vælger kontaktsektionen på mindre skærme */
+  .contact {
+  grid-template-columns: 1fr; /* Placerer de to dele under hinanden */
+  gap: 32px; /* Giver afstand mellem overskriften og kontaktoplysningerne */
+  padding: 56px 6%; /* Reducerer sektionens indvendige luft */
+  }
+
+  /* Tilpasser beskrivelsen på mindre skærme */
+  .contact-details p {
+  font-size: 17px; /* Gør teksten lidt mindre */
+  }
+
 }
-
-
-
 
