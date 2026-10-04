@@ -330,6 +330,7 @@ body {
 
 
 
+
 /* Her starter footeren */
 
 /* Vælger elementet med class="footer" */
@@ -548,6 +549,13 @@ body {
   /* Tilpasser beskrivelsen på mindre skærme */
   .contact-details p {
   font-size: 17px; /* Gør teksten lidt mindre */
+  }
+
+  /* Tilpasser Bos sektion til mindre skærme */
+  .about {
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 56px 6%;
   }
 
 }
