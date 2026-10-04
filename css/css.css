@@ -1,0 +1,342 @@
+/**
+ * file: css/css.css
+ * purpose: styling
+ **/
+
+ /* Gemmer farvevariabler, som kan bruges i hele CSS-filen */
+:root {
+  --blue: #087ef3;
+  --navy: #121f53;
+  --ink: #122036;
+  --muted: #637084;
+  --paper: #f5f6f8;
+}
+
+/* Vælger <html>, som omslutter hele hjemmesiden */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Vælger alle HTML-elementer */
+* {
+  box-sizing: border-box;
+}
+
+/* Vælger <body>, som indeholder sidens synlige indhold */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+ /* Vælger alle elementer med class="header" */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  min-height: 90px;
+  padding: 20px 5%;
+
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--muted);
+}
+
+/* Vælger alle <img>-billeder inde i et element med class="brand" */
+.brand img {
+  display: block;
+  width: 240px;
+  height: auto;
+}
+
+/* Vælger <nav> inde i et element med class="header" */
+.header nav {
+  display: flex;
+  gap: 28px;
+}
+
+/* Vælger alle <a>-links inde i headerens <nav> */
+.header nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Vælger et menulink, når musen holdes over det */
+.header nav a:hover {
+  color: var(--blue);
+}
+
+/* Vælger elementet med class="header-cta" */
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 14px 20px;
+  border-radius: 4px;
+
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Vælger kontaktknappen, når musen holdes over den */
+.header-cta:hover {
+  background-color: var(--navy);
+}
+
+/* Vælger elementet med class="hero" */
+.hero {
+  min-height: 600px;
+  padding: 80px 6%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--navy);
+  color: white;
+}
+
+/* Vælger <h1>-overskriften inde i elementet med class="hero" */
+.hero h1 {
+  max-width: 800px;
+  margin: 0 0 24px;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+/* Vælger alle <p>-tekstafsnit inde i hero-sektionen */
+.hero p {
+  max-width: 550px;
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.6;
+  color: #ccd3df;
+}
+
+/* Vælger <span> inde i hero-sektionens <h1>-overskrift */
+.hero h1 span {
+  color: var(--blue); /* Giver ordet "lyd." vores klare blå farve */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Vælger elementet med class="footer" */
+.footer {
+  display: grid; /* Arrangerer footerens indhold i kolonner og rækker */
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* Laver fire kolonner */
+  gap: 40px;
+
+  padding: 60px 6% 24px; /* Luft: øverst, i siderne og nederst */
+  background-color: white;
+  color: var(--ink);
+}
+
+/* Vælger logoet inde i elementet med class="footer-brand" */
+.footer-brand img {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Vælger alle <h2>-overskrifter inde i footeren */
+.footer h2 {
+  margin: 0 0 16px; /* Giver 16px luft under overskriften */
+  font-size: 16px; /* Gør overskrifterne mindre end sidens hovedoverskrift */
+}
+
+/* Vælger alle <p>-tekstafsnit inde i footeren */
+.footer p {
+  margin: 0; /* Fjerner browserens standardafstand omkring afsnittene */
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* Vælger tekstafsnittet under footerens logo */
+.footer-brand p {
+  margin-top: 20px; /* Giver luft mellem logoet og beskrivelsen */
+}
+
+/* Vælger alle links inde i footeren */
+.footer a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Vælger et footer-link, når musen holdes over det */
+.footer a:hover {
+  color: var(--blue);
+}
+
+/* Vælger elementet med class="footer-bottom" */
+.footer-bottom {
+  grid-column: 1 / -1; /* Lader området spænde over alle kolonner */
+
+  display: flex; /* Placerer copyright og link på en række */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding-top: 24px;
+  border-top: 1px solid #ccd3df; /* Tegner en tynd streg over området */
+}
+
+/* Skjuler burgerknappen i det almindelige layout */
+.menu-toggle {
+  display: none;
+}
+
+/* Giver knappen en tydelig markering ved navigation med tastaturet */
+.menu-toggle:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+
+
+/* Tilpasser siden, når browserens bredde er højst 800px */
+@media (max-width: 800px) {
+
+  /* Giver plads til den højere header ved klik på sektionslinks */
+  html {
+    scroll-padding-top: 160px;
+  }
+
+  /* Vælger headeren */
+  .header {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 5%;
+  }
+
+  /* Vælger logoet i headeren */
+  .brand img {
+    width: 150px;
+  }
+
+  /* Viser burgerknappen på små skærme */
+  .menu-toggle {
+  display: flex; /* Gør knappen synlig og styrer stregernes placering */
+  flex-direction: column;
+  justify-content: center; /* Centrerer stregerne lodret */
+  align-items: center; /* Centrerer stregerne vandret */
+  gap: 5px; /* Giver afstand mellem stregerne */
+
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+
+  padding: 0; /* Fjerner standardluften inde i knappen */
+  border: none;
+  background-color: transparent;
+  cursor: pointer; /* Viser en hånd, når musen holdes over knappen */
+  }
+
+  /* Tegner burgerknappens tre streger */
+  .menu-toggle span {
+  width: 24px; /* Bestemmer stregernes længde */
+  height: 2px; /* Bestemmer stregernes tykkelse */
+  background-color: var(--navy);
+  border-radius: 2px; /* Runder stregernes ender lidt */
+  }
+
+  /* Skjuler headerens kontaktknap for at give plads på små skærme */
+  .header-cta {
+  display: none;
+  }
+
+  /* Skjuler navigationen, indtil burgerknappen aktiveres */
+  .header nav {
+  display: none;
+  order: 1; /* Placerer menuen efter logo og burgerknap */
+  flex-basis: 100%; /* Giver menuen hele rækkens bredde */
+  flex-direction: column; /* Placerer menupunkterne under hinanden */
+  align-items: stretch; /* Lader linkene fylde menuens bredde */
+  gap: 0;
+  }
+
+  /* Viser navigationen, når den har fået klassen "is-open" */
+  .header nav.is-open {
+  display: flex;
+  }
+
+  /* Giver hvert menupunkt et større område at trykke på */
+  .header nav a {
+  padding: 14px 0;
+  font-size: 16px;
+  }
+
+  /* Vælger hero-sektionen */
+  .hero {
+    min-height: auto;
+    padding: 56px 6%;
+  }
+
+  /* Vælger hero-sektionens hovedoverskrift */
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 48px);
+    letter-spacing: -1px;
+  }
+
+  /* Vælger hero-sektionens tekstafsnit */
+  .hero p {
+    font-size: 17px;
+  }
+
+  /* Vælger hero-sektionens kontaktknap */
+  .hero-cta {
+    width: 100%;
+    max-width: 360px; /* Forhindrer knappen i at blive for bred */
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Vælger footeren */
+  .footer {
+    grid-template-columns: 1fr; /* Placerer grupperne i én kolonne */
+    gap: 32px;
+    padding: 40px 6% 24px;
+  }
+
+  /* Vælger footerens nederste område */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start; /* Justerer dem mod venstre */
+    gap: 12px;
+  }
+}
+
+
+
+
