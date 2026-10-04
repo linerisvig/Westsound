@@ -323,7 +323,18 @@ body {
   line-height: 1.8;
 }
 
+/* Vælger Instagram-linket i footerens kontaktområde */
+.footer-contact .instagram-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content; /* Lader linkets bredde passe til indholdet */
+}
 
+/* Vælger SVG-ikonet inde i Instagram-linket */
+.instagram-link svg {
+  flex-shrink: 0; /* Forhindrer ikonet i at blive klemt på små skærme */
+}
 
 
 
