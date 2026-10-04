@@ -268,6 +268,60 @@ body {
   background-color: var(--navy);
 }
 
+/* Vælger billedet inde i elementet med class="about-photo" */
+.about-photo img {
+  display: block; /* Fjerner den lille standardafstand under billedet */
+  width: 100%; 
+  height: auto; 
+  border-radius: 4px; 
+}
+
+/* Vælger sektionen med class="about" */
+.about {
+  display: grid; /* Arrangerer billede og tekst i kolonner */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+
+  padding: 80px 6%; /* Giver luft: 80px top/bund og 6% i siderne */
+  background-color: var(--paper); /* Bruger vores lyse baggrundsfarve */
+}
+
+/* Vælger den lille introduktion over overskriften */
+.about-eyebrow {
+  margin: 0 0 16px; 
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* Viser teksten med store bogstaver */
+  line-height: 1.6; /* Giver luft, hvis teksten fylder flere linjer */
+}
+
+/* Vælger overskriften inde i Bos sektion */
+.about h2 {
+  margin: 0 0 12px; /* Giver afstand under overskriften */
+  color: var(--navy);
+  font-size: clamp(36px, 4vw, 52px); /* Tilpasser størrelsen fra 36 til 52px */
+  line-height: 1.1;
+}
+
+/* Vælger teksten med Bos rolle */
+.about-role {
+  margin: 0 0 24px; /* Giver luft før præsentationen */
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Vælger den længere præsentation af Bo */
+.about-description {
+  margin: 0; /* Fjerner standardafstanden omkring afsnittet */
+  max-width: 500px; /* Begrænser tekstlinjernes længde */
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
 
 
 
