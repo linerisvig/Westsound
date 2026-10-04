@@ -111,6 +111,20 @@ body {
 
   background-color: var(--navy);
   color: white;
+
+  /* Lægger et mørkt farvelag oven på baggrundsbilledet */
+  background-image:
+    linear-gradient(to right, rgba(8, 16, 35, 0.85),rgba(8, 16, 35, 0.45)),
+    url("../images/Truss-baggrund.JPG");
+
+  /* Lader billedet fylde hele sektionen uden at blive strakt */
+  background-size: cover;
+
+  /* Centrerer billedet, når dele af det bliver beskåret */
+  background-position: center;
+
+  /* Forhindrer billedet i at blive gentaget */
+  background-repeat: no-repeat;
 }
 
 /* Vælger <h1>-overskriften inde i elementet med class="hero" */
@@ -138,7 +152,6 @@ body {
 .hero h1 span {
   color: var(--blue); /* Giver ordet "lyd." vores klare blå farve */
 }
-
 
 
 
