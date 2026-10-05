@@ -60,6 +60,7 @@ body {
 .header nav {
   display: flex;
   gap: 28px;
+  margin-left: auto; /* Skubber navigationen mod højre */
 }
 
 /* Vælger alle <a>-links inde i headerens <nav> */
@@ -347,8 +348,8 @@ body {
 /* Vælger elementet med class="footer" */
 .footer {
   display: grid; /* Arrangerer footerens indhold i kolonner og rækker */
-  grid-template-columns: 2fr 1fr 1fr 1fr; /* Laver fire kolonner */
-  gap: 40px;
+  grid-template-columns: 3fr 1fr 1fr; /* Laver tre kolonner */
+  gap: 40px 24px;
 
   padding: 60px 6% 24px; /* Luft: øverst, i siderne og nederst */
   background-color: white;
@@ -425,6 +426,12 @@ body {
   overflow-wrap: anywhere; /* Lader lange adresser ombryde ved behov */
 }
 
+/* Vælger kortlinket i footerens lagerområde */
+.footer-storage a {
+  display: inline-block; /* Lader linket være en samlet blok, der følger indholdets bredde */
+  line-height: 1.8; /* Giver luft mellem adressens linjer */
+}
+
 /* Her slutter footeren */
 
 
@@ -485,11 +492,6 @@ body {
   border-radius: 2px; /* Runder stregernes ender lidt */
   }
 
-  /* Skjuler headerens kontaktknap for at give plads på små skærme */
-  .header-cta {
-  display: none;
-  }
-
   /* Skjuler navigationen, indtil burgerknappen aktiveres */
   .header nav {
   display: none;
@@ -498,6 +500,7 @@ body {
   flex-direction: column; /* Placerer menupunkterne under hinanden */
   align-items: stretch; /* Lader linkene fylde menuens bredde */
   gap: 0;
+  margin-left: 0; /* Nulstiller den automatiske venstreafstand fra computerlayoutet */
   }
 
   /* Viser navigationen, når den har fået klassen "is-open" */
