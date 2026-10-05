@@ -324,6 +324,57 @@ body {
   line-height: 1.8;
 }
 
+/* Vælger beholderen med begge medarbejderprofiler */
+.team-members {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+
+  padding-top: 32px;
+  border-top: 1px solid var(--muted); /* Tegner en diskret skillelinje under Bos område */
+}
+
+/* Vælger hver enkelt medarbejderprofil */
+.team-member {
+  display: flex; 
+  align-items: center;
+  gap: 20px; 
+}
+
+/* Vælger de midlertidige billedfelter */
+.team-photo-placeholder {
+  width: 90px;
+  height: 110px;
+  flex-shrink: 0; /* Forhindrer feltet i at blive klemt af teksten */
+
+  display: flex; /* Gør det muligt at centrere teksten i feltet */
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ccd3df; /* Giver feltet en lys gråblå baggrund */
+  color: var(--muted);
+  font-size: 12px;
+  border-radius: 4px; /* Runder hjørnerne lidt */
+}
+
+/* Vælger medarbejdernes navne */
+.team-member-info h3 {
+  margin: 0 0 8px; /* Giver luft mellem navnet og rollen */
+  color: var(--navy);
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* Vælger medarbejdernes roller */
+.team-member-info p {
+  margin: 0; /* Fjerner standardafstanden omkring tekstafsnittet */
+  color: var(--blue);
+  font-size: 16px; /* Sætter tekstens størrelse */
+  font-weight: 600;
+  line-height: 1.6; /* Giver luft, hvis rollen fylder flere linjer */
+}
+
 /* Vælger Instagram-linket i footerens kontaktområde */
 .footer-contact .instagram-link {
   display: flex;
@@ -587,6 +638,13 @@ body {
   gap: 32px;
   padding: 56px 6%;
   }
+
+  /* Tilpasser medarbejderprofilerne til mindre skærme */
+  .team-members {
+  grid-template-columns: 1fr; /* Placerer Asbjørn og Line under hinanden */
+  gap: 28px;
+  }
+
 
 }
 
