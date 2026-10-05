@@ -490,6 +490,22 @@ body {
   height: 2px; /* Bestemmer stregernes tykkelse */
   background-color: var(--navy);
   border-radius: 2px; /* Runder stregernes ender lidt */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Giver en blød overgang, når stregerne flyttes eller skjules */
+  }
+
+  /* Vælger den øverste streg, når menuen er åben */
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg); /* Flytter stregen ned og drejer den */
+  }
+
+  /* Vælger den midterste streg, når menuen er åben */
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0; /* Gør stregen usynlig, men bevarer dens plads */
+  }
+
+  /* Vælger den nederste streg, når menuen er åben */
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg); /* Flytter stregen op og drejer den */
   }
 
   /* Skjuler navigationen, indtil burgerknappen aktiveres */
